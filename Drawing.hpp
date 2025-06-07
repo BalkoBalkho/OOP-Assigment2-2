@@ -42,6 +42,14 @@ class Spritesheet
 			(float)SPRITE_WIDTH,
 			(float)SPRITE_HEIGHT};
 	}
+	~Spritesheet()
+	{
+		if (spritesheet.id != 0) // Check if the texture is loaded
+		{
+			UnloadTexture(spritesheet); // Unload the texture to free resources
+			spritesheet.id = 0; // Reset the ID to indicate it's unloaded
+		}
+	}
 };
 
 
