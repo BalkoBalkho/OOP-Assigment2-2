@@ -45,13 +45,13 @@ class Monster : public Unit {
 	bool corpse_sprite;  
 	uint16_t vision_day;  
 	uint16_t damage_amount;  
+	Room* rom;
 
 public:  
 	int getdifficulty() { //how dangerous this monster is.  
 		return (health / 10) + speed + morale / 10 + dodge + vision_day * 2 + damage_amount * 5;  
 	}  
-
-	void move(Room rom,POS playerpos) {
+	void move(Room rosom,POS playerpos) {
 		
 
 	}
@@ -87,6 +87,8 @@ public:
 	}
 
 	virtual ~Monster() override = default;  
+	
+
 };  
 
 class ItemOnGround : public Unit {  
@@ -104,4 +106,19 @@ class Item {
 class Player : private Unit {  
 	std::vector<Item> inventory;  
 	
+    void take_input() {
+    // Example Raylib input handling for player movement (WASD)
+    if (IsKeyDown(KEY_W)) {
+    position.y -= 1;
+    }
+    if (IsKeyDown(KEY_S)) {
+    position.y += 1;
+    }
+    if (IsKeyDown(KEY_A)) {
+    position.x -= 1;
+    }
+    if (IsKeyDown(KEY_D)) {
+    position.x += 1;
+    }
+    }
 };
