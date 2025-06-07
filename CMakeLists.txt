@@ -17,8 +17,8 @@ endif()
 
 
 # This is the main part:
-set(SOURCES main.cpp raygui.h "Leaderboard.h" "Classes.hpp" "Drawing.hpp")
-add_executable(${PROJECT_NAME} ${SOURCES})
+set(SOURCES main.cpp raygui.h "Leaderboard.h" "Classes.hpp" "Drawing.hpp" "Units.hpp" "veryslowjson.hpp" "Units.hpp" "JsonRegistry.hpp" "gamestuff.h")
+add_executable(${PROJECT_NAME} ${SOURCES} "gamestuff.h")
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)
 target_link_libraries(${PROJECT_NAME} PUBLIC raylib)
 

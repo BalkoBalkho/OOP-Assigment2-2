@@ -5,16 +5,18 @@
 
 int main()
 {
-    InitWindow(400, 200, "Parasite");
+    InitWindow(1366, 768, "Parasite");
     SetTargetFPS(60);
 
     bool showMessageBox = false;
 
     while (!WindowShouldClose())
     {
+
+        
         // Draw
         //----------------------------------------------------------------------------------
-        BeginDrawing();
+        /*BeginDrawing();
         ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
 
         if (GuiButton(Rectangle { 24, 24, 120, 30 }, "#191#Show Message")) showMessageBox = true;
@@ -27,7 +29,7 @@ int main()
             if (result >= 0) showMessageBox = false;
         }
 
-        EndDrawing();
+        EndDrawing();*/
     }
 
     CloseWindow();

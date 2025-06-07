@@ -1,0 +1,3 @@
+stolen from catacylsm DDA's assets (open source zombie survival game)
+The game is extremely complex, it even has inheritence in json
+we try to keep it simple..
