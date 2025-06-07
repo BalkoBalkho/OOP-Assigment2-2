@@ -1,4 +1,4 @@
-[
+const tileJson = [
   {
     "id": [ "player_female", "npc_female" ],
     "fg": 5,
@@ -44526,4 +44526,47 @@
     "id": "vp_reinforced_windshield_full_ne_rotW",
     "fg": 9030
   }
-]
+];
+// Helper to format a number or array of numbers into a C++ vector initializer list
+function formatVector(value) {
+    if (Array.isArray(value)) {
+        return `{ ${value.join(', ')} }`;
+    }
+    // If it's a single number, wrap it in a vector for consistency
+    return `{ ${value} }`;
+}
+
+
+let output = `
+#pragma once
+
+#include <string>
+#include <map>
+#include <cstdint> // For uint16_t
+
+// Global map: Tile ID (string) to its primary foreground sprite index (uint16_t)
+const std::map<std::string, uint16_t> tile_id_to_fg_map = {
+`;
+
+tileJson.forEach(entry => {
+    // Determine the primary foreground sprite index (take the first if it's an array)
+    let fg_index = Array.isArray(entry.fg) ? entry.fg[0] : entry.fg;
+    if (fg_index == null) return;
+    if (typeof fg_index !== 'number') return;
+    if ( Array.isArray(fg_index) && Object.values(fg_index[0]).includes("sprite")) {
+        fg_index = fg_index[0]["sprite"];
+    }
+
+
+    // Handle 'id' being a string or an array of strings
+    const ids = Array.isArray(entry.id) ? entry.id : [entry.id];
+  
+    ids.forEach(id => {
+        output += `    { "${id}", ${fg_index} },\n`;
+    });
+});
+
+output += `};
+`;
+
+console.log(output);

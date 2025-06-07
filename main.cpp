@@ -1,35 +1,31 @@
 #include "raylib.h"
+#include "Classes.hpp"
+#include "Units.hpp"
+#include "JsonRegistry.h"
+#include "gamestuff.h"
+#include "Drawing.hpp"
 
 #define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
 
 int main()
 {
+    GameState gs;
+    Drawing::ss;
+    Drawing::dl;
+
+
     InitWindow(1366, 768, "Parasite");
     SetTargetFPS(60);
 
     bool showMessageBox = false;
-
     while (!WindowShouldClose())
     {
+    BeginDrawing();
+        Monsterjsonregistry mj;
 
-        
-        // Draw
-        //----------------------------------------------------------------------------------
-        /*BeginDrawing();
-        ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
-
-        if (GuiButton(Rectangle { 24, 24, 120, 30 }, "#191#Show Message")) showMessageBox = true;
-
-        if (showMessageBox)
-        {
-            int result = GuiMessageBox(Rectangle { 85, 70, 250, 100 },
-                "#191#Message Box", "Hi! This is a message!", "Nice;Cool");
-
-            if (result >= 0) showMessageBox = false;
-        }
-
-        EndDrawing();*/
+        mj.get_monster(1, {1,2}, 10);
+        EndDrawing();
     }
 
     CloseWindow();

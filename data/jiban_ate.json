@@ -671,7 +671,7 @@
       "id": "mon_giant_crayfish",
       "type": "MONSTER",
       "name": {
-        "str_sp": "giant crayfish"
+        "str": "giant crayfish"
       },
       "description": "A mutant, terrestrial variety of crayfish, this massive crustacean resembles a humongous lobster.",
       "default_faction": "crayfish",
@@ -917,7 +917,7 @@
       "id": "mon_mutant_salmon",
       "type": "MONSTER",
       "name": {
-        "str_sp": "giant salmon"
+        "str": "giant salmon"
       },
       "description": "A mutated salmon roughly the size of a person.  Quite dangerous to the inexperienced angler.",
       "default_faction": "fish_mutant_passive",
@@ -987,7 +987,7 @@
       "id": "mon_mutant_salmon_huge",
       "type": "MONSTER",
       "name": {
-        "str_sp": "huge salmon"
+        "str": "huge salmon"
       },
       "description": "A huge mutant salmon grown almost to the size of an alligator.",
       "default_faction": "fish_mutant_passive",
@@ -1053,7 +1053,7 @@
       "id": "mon_mutant_salmon_mega",
       "type": "MONSTER",
       "name": {
-        "str_sp": "leaper salmon"
+        "str": "leaper salmon"
       },
       "description": "A huge mutant salmon, one that outgrows even the other ones present.  On its sides, beneath the fins, are visible two flesh-colored tubes which propel water as it leaps.",
       "default_faction": "fish_mutant_passive",
@@ -2037,7 +2037,7 @@
       "id": "mon_silverfish",
       "type": "MONSTER",
       "name": {
-        "str_sp": "giant silverfish"
+        "str": "giant silverfish"
       },
       "description": "A mutant silverfish roughly the size of a person.  Doesn't seem at all interested in you.",
       "default_faction": "insect",
@@ -7445,7 +7445,7 @@
       "id": "mon_deer",
       "type": "MONSTER",
       "name": {
-        "str_sp": "deer"
+        "str": "deer"
       },
       "description": "The northern woodland white-tailed deer, a quick and strong grazing animal.  Favored prey of coyotes, wolves, and giant spider mutants.",
       "default_faction": "herbivore",
@@ -7748,7 +7748,7 @@
       "copy-from": "mon_dog",
       "type": "MONSTER",
       "name": {
-        "str_sp": "Great Pyrenees"
+        "str": "Great Pyrenees"
       },
       "//": "Rare, location specific only",
       "description": "A large and powerful breed, the Great Pyrenees has a beautiful, thick white coat.  Originally bred to deter wolves and other predators, now faced with protecting livestock from shambling hordes of undead.",
@@ -8370,7 +8370,7 @@
       "id": "mon_moose",
       "type": "MONSTER",
       "name": {
-        "str_sp": "moose"
+        "str": "moose"
       },
       "description": "The Eastern moose, the largest living species of deer.  While they aren't typically aggressive unless provoked, the autumn mating season can make the bulls quite ill-tempered.",
       "default_faction": "herbivore",
@@ -8567,7 +8567,7 @@
       "id": "mon_tusked_moose",
       "type": "MONSTER",
       "name": {
-        "str_sp": "great tusked moose"
+        "str": "great tusked moose"
       },
       "description": "A mutant variety of megafauna that evolved after the Cataclysm.  Easily recognized by the underslung tusks off each side of the mouth, in addition to an impressive rack of antlers.  Given the looks and how aggressive normal moose are, you reckon you shouldn't test the patience of this one.",
       "default_faction": "herbivore",
@@ -9472,7 +9472,7 @@
       "id": "mon_sheep",
       "type": "MONSTER",
       "name": {
-        "str_sp": "sheep"
+        "str": "sheep"
       },
       "description": "A timid, hooved grazing mammal, and one of the first animals ever domesticated.  Its body is covered in a thick layer of wool, and the males have long, spiraling horns.",
       "default_faction": "herbivore_domestic",
@@ -9895,7 +9895,7 @@
       "id": "mon_reindeer",
       "type": "MONSTER",
       "name": {
-        "str_sp": "reindeer"
+        "str": "reindeer"
       },
       "description": "Also known as the caribou, this deer is native to North America and parts of Eurasia.  Although usually friendly, they can be aggressive during the autumn and winter mating season as well as when hungry.",
       "default_faction": "herbivore",
@@ -12634,7 +12634,7 @@
       "id": "mon_tindalos",
       "type": "MONSTER",
       "name": {
-        "str_sp": "star-crowned hound"
+        "str": "star-crowned hound"
       },
       "description": "Isometry is torn from the fine structure of space, and the emptiness between disgorges its terrible brood upon the world.  Its form is both incomprehensibly vast and infinitely narrow, with splayed limbs that could fold into the paper-thinness of edges.",
       "default_faction": "nether",
@@ -14412,7 +14412,7 @@
       "id": "mon_lieutenant_shadow",
       "type": "MONSTER",
       "name": {
-        "str_sp": "A shadow?"
+        "str": "A shadow?"
       },
       "description": "Something is there!  Against all reason, this shadow lurks at the corners of your vision.  You close your eyes, but still, it is there.  No matter how far you run, it is there.  In pitchest black, it is there.  Now you will know why you fear the night.",
       "default_faction": "attack_player_only",

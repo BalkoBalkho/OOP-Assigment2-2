@@ -26,7 +26,7 @@ class Spritesheet
 		}
 	}
 
-	static const Texture2D& getSpritesheet() {
+	const Texture2D& getSpritesheet() {
 		return spritesheet;
 	}
 	Rectangle getSprite(uint32_t index)
@@ -132,10 +132,11 @@ public:
 	}
 };
 
+
 namespace Drawing {
 
-	DrawList dl;
-	Spritesheet spritesheet;
+extern	DrawList dl;
+	extern Spritesheet ss;
 
-	
+
 }
