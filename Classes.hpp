@@ -27,6 +27,9 @@ class Building//dungeon
 
 };
 class Tile {
+	Unit* unit = nullptr; //pointer to the unit on this tile, if any
+
+public:
 	enum class TileType {
 		Empty, //no tile
 		Floor, //floor tile
@@ -35,9 +38,10 @@ class Tile {
 		StairsUp, //stairs up tile
 		StairsDown, //stairs down tile
 	};
-
-	Unit* unit = nullptr; //pointer to the unit on this tile, if any
-
+private:     TileType type;
+public:
+	Tile() : type(TileType::Empty), unit(nullptr) {} // Default constructor
+	Tile(TileType t) : type(t), unit(nullptr) {}
 };
 class Room {
 	
@@ -102,45 +106,3 @@ class Player :public Unit{
 };
 
 
-//used for UI
-struct DrawFunctor {
-	std::string id; //name of the functor, used for debugging
-	std::function<bool()> func; //the function to call
-	DrawFunctor(const std::string& name, std::function<bool()> func) : id(name), func(func) {}
-	// if functor returns false, it will be removed from the list.
-	bool operator()() { return func(); } //call the function
-};
-class DrawList {
-	//provide a functor that will execute raylib draw calls.
-	//functors are perfect for this, as they can capture state like how UI has state.
-	std::vector<std::unique_ptr<DrawFunctor>> drawFunctions;
-public:
-	DrawFunctor getFromId(const std::string& id) const {
-		for (const auto& func : drawFunctions) {
-			if (func.id == id) {
-				return func;
-			}
-		}
-		throw std::runtime_error("DrawFunctor with id " + id + " not found.");
-	}
-	void add(const DrawFunctor& functor) {
-		drawFunctions.push_back(functor);
-	}
-	void remove(const std::string& id) {
-		drawFunctions.erase(std::remove_if(drawFunctions.begin(), drawFunctions.end(),
-			[&id](const DrawFunctor& f) { return f.id == id; }), drawFunctions.end());
-	}
-	void draw() {
-		for (auto& func : drawFunctions) {
-			if (!func()) { //if the function returns false, remove it
-				remove(func.id);
-			}
-		}
-	}
-	
-
-	
-	
-	
-
-};
